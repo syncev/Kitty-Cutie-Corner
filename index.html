@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gatitos Aleatorios</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 class="strPink tittle">Kitty Cutie Corner</h1>
+
+    <section id="randomMichis">
+      <div class="separator">
+        <img src="./assets/separator no bg.png" alt="" />
+      </div>
+      <h2 class="strPink mainText">Daily Dose</h2>
+
+      <div class="randomArtWrapper">
+        <article class="randomArt one">
+          <img id="img1" width="350px" alt="Foto gatito aleatorio" />
+          <button id="btn1">
+            <img src="./assets/unsaved no bg.png" alt="save icon" />
+          </button>
+        </article>
+
+        <article class="randomArt two">
+          <img id="img2" width="350px" alt="Foto gatito aleatorio" />
+          <button id="btn2">
+            <img src="./assets/unsaved no bg.png" alt="save icon" />
+          </button>
+        </article>
+
+        <article class="randomArt three">
+          <img id="img3" width="350px" alt="Foto gatito aleatorio" />
+          <button id="btn3">
+            <img src="./assets/unsaved no bg.png" alt="save icon" />
+          </button>
+        </article>
+      </div>
+      <div class="mainReload">
+        <button onclick="loadRandomMichis()" class="mainReloadBtn">
+          <img src="./assets/Refresh no bg.png" alt="refresh" />
+        </button>
+      </div>
+    </section>
+
+    <section id="uploadingMichi">
+      <div class="separator">
+        <img src="./assets/separator no bg.png" alt="" />
+      </div>
+      <h2 class="strPink mainText">Upload Your Cutie</h2>
+      <span id="error"> </span>
+
+      <form id="uploadingForm">
+        <input type="file" name="file" id="file" />
+        <label for="file" id="fileIconWrapper">
+          <img src="./assets/folder.png" alt="" />
+          <p for="file" class="strPink">Choose File</p>
+        </label>
+        <img alt="uploadPreview" id="uploadPreview" style="display: none" />
+        <img
+          src="./assets/uploadBtn.png"
+          alt=""
+          onclick="uploadMichiPhoto()"
+          id="uploadBtn"
+          style="display: none"
+        />
+      </form>
+    </section>
+
+    <section id="favoriteMichisWrapper">
+      <div class="separator" id="thisB">
+        <img src="./assets/separator no bg.png" alt="" />
+      </div>
+      <h2 class="strPink mainText">Your Saved Kitties</h2>
+      <div id="favoriteMichis"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

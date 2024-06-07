@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "The Seasons";
+    src: url("./assets/fonts/The Seasons Font/Fontspring-DEMO-theseasons-lt.otf");
+}
+body{
+    background-image: linear-gradient(to right,#050505, #717171 )
+}
+.mainText{
+    font-family: "The Seasons";
+    font-size: 2.5rem
+
+}
+.strPink{
+    color: #FF66C4;
+}
+button{
+    border: none;
+}
+h1{
+    display: flex;
+    font-family: "Dancing Script", cursive;
+}
+
+.separator{
+    height: 15px;
+}
+.separator img{
+    width: 180px;
+}
+.mainText, .mainReload, .separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.randomArtWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+.randomArt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow: hidden;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    
+}
+.randomArt img{
+    border-radius: inherit;
+    max-width: 300px;
+    max-height: 300px;
+    object-fit:cover
+}
+
+
+button img{
+    height: 32px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.mainReloadBtn{
+    margin-top: 25px;
+    border-radius: 30px;
+    width: 90px;
+    
+}
+
+.randomArt button  {
+    background: none;
+    padding: 0;
+}
+#uploadingMichi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+#uploadingForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#file{
+   display: none
+}
+#fileIconWrapper{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#uploadPreview{
+    margin-top: 15px;
+    border-radius: 15px;
+    border: 1px solid #FF66C4; 
+}
+#uploadBtn{
+    margin-top: 20px;
+    width: 150px;
+}
+#favoriteMichisWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+#favoriteMichis{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;  
+    margin-top: 30px;
+    
+    
+}
+#favoriteMichis button {
+    margin-top: 25px;
+    
+    padding: none;
+    background: none;
+}
+#favoriteMichis article{
+    
+    display: flex;
+    flex-direction: column;
+    
+}
+.favImg{
+    
+    border-radius: 15px;
+}
