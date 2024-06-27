@@ -23,8 +23,6 @@ async function loadRandomMichis() {
 
   // const res = await fetch(API_URL_RANDOM);
   // const data = await res.json();
-  console.log("Gatitos");
-  console.log(data);
 
   if(status !== 200){
     spanError.innerHTML = "Algo malio sal" + status;
@@ -87,7 +85,6 @@ async function loadFavoritesMichis() {
     // });
     // const data = await res.json();
 
-    console.log(data)
 
     if(status !== 200){
       spanError.innerHTML = "Algo malio sal" + status + data.message;
@@ -135,12 +132,10 @@ async function saveFavouriteMichi(id){
   // });
   // const data = await res.json();
 
-  console.log('Save')
 
   if(status !== 200){
     spanError.innerHTML = "Algo malio sal" + status + data.message;
   } else {
-    console.log("Michi guardado a favoritos")
     loadFavoritesMichis();
   }
 }
@@ -157,7 +152,6 @@ async function deleteFavouriteMichi(id){
   if(status !== 200){
     spanError.innerHTML = "Algo malio sal" + status + data.message;
   } else{
-    console.log("Michi eliminado de favoritos")
     loadFavoritesMichis();
   }
 }
@@ -166,7 +160,6 @@ async function uploadMichiPhoto(){
   const form = document.getElementById('uploadingForm')
   const formData = new FormData(form);
   
-  console.log(formData)
   const {data, status} = await api.postForm('/images/upload', formData,
   );
   // const res = await fetch(API_URL_UPLOAD, {
@@ -179,13 +172,8 @@ async function uploadMichiPhoto(){
   // const data = await res.json();
 
   if(status !== 201){
-    console.log({data});
-    console.log({formData});
   spanError.innerHTML = "hubo un error: " + status ;
 } else {
-  console.log('Foto de michi subida :)')
-  console.log({data})
-  console.log(data.url)
   saveFavouriteMichi(data.id);
 }
 

@@ -4,7 +4,10 @@
 }
 body{
     background-image: linear-gradient(to right,#050505, #717171 );
-    overflow: hidden
+    overflow: auto
+}
+body::-webkit-scrollbar{
+    display: none
 }
 .mainText{
     font-family: "The Seasons";
