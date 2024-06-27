@@ -3,7 +3,8 @@
     src: url("./assets/fonts/The Seasons Font/Fontspring-DEMO-theseasons-lt.otf");
 }
 body{
-    background-image: linear-gradient(to right,#050505, #717171 )
+    background-image: linear-gradient(to right,#050505, #717171 );
+    overflow: hidden
 }
 .mainText{
     font-family: "The Seasons";
